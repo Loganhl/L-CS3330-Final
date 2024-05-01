@@ -1,0 +1,60 @@
+[
+    {
+        "foodType":"Fruit",
+        "foodItem":[
+            {"foodName": "Apple", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Watermelon", "servingSize": "1 Cup Diced", "calories": 46, "fats": 0.2, "cholesterol": 0, "sodium": 2, "carbs": 11, "protein": 0.9 },
+            {"foodName": "Banana", "servingSize": "1 Medium Banana", "calories": 105, "fats": 0.4, "cholesterol": 0, "sodium": 1, "carbs": 27, "protein": 1.3 },
+            {"foodName": "Peach", "servingSize": "1 Medium Peach", "calories": 60, "fats": 0.5, "cholesterol": 0, "sodium": 0, "carbs": 15, "protein": 1 },
+            {"foodName": "Stawberry", "servingSize": "1 cup", "calories": 50, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 13, "protein": 1 }
+        ]
+    },
+
+    {
+        "foodType":"Vegetables",
+        "foodItem":[
+            {"foodName": "Carrot", "servingSize": "1 Medium Carrot", "calories": 25, "fats": 0.1, "cholesterol": 0, "sodium": 42, "carbs": 6, "protein": 0.6 },
+            {"foodName": "Yellow Squash", "servingSize": "1 Medium Squash", "calories": 32, "fats": 0.4, "cholesterol": 0, "sodium": 4, "carbs": 7, "protein": 2.4 },
+            {"foodName": "White Onion", "servingSize": "1 Raw Medium", "calories": 60, "fats": 0, "cholesterol": 0, "sodium": 5, "carbs": 16, "protein": 1 },
+            {"foodName": "Bell Pepper", "servingSize": "1 Medium", "calories": 24, "fats": 0.2, "cholesterol": 0, "sodium": 4, "carbs": 6, "protein": 1 },
+            {"foodName": "Tomato", "servingSize": "1 Medium Tomato", "calories": 22, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 5, "protein": 1 }
+        ]
+    },
+
+    {
+        "foodType":"Grains",
+        "foodItem":[
+            {"foodName": "Quinoa", "servingSize": "1 Cup", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Oatmeal", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Brown Rice", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Popcorn", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Corn", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
+        ]
+    },
+
+
+    {
+        "foodType":"Protein Foods",
+        "foodItem":[
+            {"foodName": "Chicken Breast", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Egg", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Lentils", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Tilapia", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Ground Beef", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
+        ]
+    },
+
+
+    {
+        "foodType":"Dairy",
+        "foodItem":[
+            {"foodName": "Greek Yogurt", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Milk", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Butter", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Heavy Cream", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Cottage Cheese", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
+        ]
+    },
+
+
+]
