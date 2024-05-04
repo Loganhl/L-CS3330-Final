@@ -25,7 +25,7 @@
         "foodType":"Grains",
         "foodItem":[
             {"foodName": "Quinoa", "servingSize": "1 Cup", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Oatmeal", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
+            {"foodName": "Oatmeal", "servingSize": "1 Cup", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
             {"foodName": "Brown Rice", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
             {"foodName": "Popcorn", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
             {"foodName": "Corn", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
