@@ -11,11 +11,9 @@ public abstract class Food {
     protected double sodium;
     protected double carbohydrates;
     protected double protein;
-    protected String recipe;
-    protected String nutritionalRecommendation;
-	
+
 	//constructor
-    public Food(String foodType, String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein, String recipe, String nutritionalRecommendation) {
+    public Food(String foodType, String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
         this.foodType = foodType;
         this.foodName = foodName;
         this.servingSize = servingSize;
@@ -25,8 +23,7 @@ public abstract class Food {
         this.sodium = sodium;
         this.carbohydrates = carbohydrates;
         this.protein = protein;
-        this.recipe = recipe;
-        this.nutritionalRecommendation = nutritionalRecommendation;
+
     }
 
    
@@ -41,9 +38,7 @@ public abstract class Food {
         		"\nCholesterol:" + cholesterol +
         		"\nsodium:" + sodium +
         		"\nCarbohydrates:" + carbohydrates +
-        		"\nProtein:" + protein +
-        		"\nRecipe:" + recipe +
-        		"\nNutritional Recommendation:" + nutritionalRecommendation;
+        		"\nProtein:" + protein;
     }
 
 	//Getter and Setter

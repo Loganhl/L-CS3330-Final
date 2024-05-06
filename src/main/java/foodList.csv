@@ -1,0 +1,26 @@
+foodType,foodName,servingSize,calories,fats,cholesterol,sodium,carbs,protein
+Fruit,Apple,1 Medium Apple,95,0,0,2,25,0
+Fruit,Watermelon,1 Cup Diced,46,0.2,0,2,11,0.9
+Fruit,Banana,1 Medium Banana,105,0.4,0,1,27,1.3
+Fruit,Peach,1 Medium Peach,60,0.5,0,0,15,1
+Fruit,Stawberry,1 cup,50,0,0,2,13,1
+Vegetables,Carrot,1 Medium Carrot,25,0.1,0,42,6,0.6
+Vegetables,Yellow Squash,1 Medium Squash,32,0.4,0,4,7,2.4
+Vegetables,White Onion,1 Raw Medium,60,0,0,5,16,1
+Vegetables,Bell Pepper,1 Medium,24,0.2,0,4,6,1
+Vegetables,Tomato,1 Medium Tomato,22,0,0,2,5,1
+Grains,Quinoa,1 Cup,95,0,0,2,25,0
+Grains,Oatmeal,1 Cup,95,0,0,2,25,0
+Grains,Brown Rice,1 Medium Apple,95,0,0,2,25,0
+Grains,Popcorn,1 Medium Apple,95,0,0,2,25,0
+Grains,Corn,1 Medium Apple,95,0,0,2,25,0
+Protein Foods,Chicken Breast,1 Medium Apple,95,0,0,2,25,0
+Protein Foods,Egg,1 Medium Apple,95,0,0,2,25,0
+Protein Foods,Lentils,1 Medium Apple,95,0,0,2,25,0
+Protein Foods,Tilapia,1 Medium Apple,95,0,0,2,25,0
+Protein Foods,Ground Beef,1 Medium Apple,95,0,0,2,25,0
+Dairy,Greek Yogurt,1 Medium Apple,95,0,0,2,25,0
+Dairy,Milk,1 Medium Apple,95,0,0,2,25,0
+Dairy,Butter,1 Medium Apple,95,0,0,2,25,0
+Dairy,Heavy Cream,1 Medium Apple,95,0,0,2,25,0
+Dairy,Cottage Cheese,1 Medium Apple,95,0,0,2,25,0
