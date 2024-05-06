@@ -1,60 +1,287 @@
 [
     {
-        "foodType":"Fruit",
-        "foodItem":[
-            {"foodName": "Apple", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Watermelon", "servingSize": "1 Cup Diced", "calories": 46, "fats": 0.2, "cholesterol": 0, "sodium": 2, "carbs": 11, "protein": 0.9 },
-            {"foodName": "Banana", "servingSize": "1 Medium Banana", "calories": 105, "fats": 0.4, "cholesterol": 0, "sodium": 1, "carbs": 27, "protein": 1.3 },
-            {"foodName": "Peach", "servingSize": "1 Medium Peach", "calories": 60, "fats": 0.5, "cholesterol": 0, "sodium": 0, "carbs": 15, "protein": 1 },
-            {"foodName": "Stawberry", "servingSize": "1 cup", "calories": 50, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 13, "protein": 1 }
+        "foodType": "Fruit",
+        "recipe": "Fruit Salad Recipe: Ingredients:\n- (Assorted Fruits e.g., strawberries, blueberries, grapes, kiwi, pineapple) : \n- Instructions: \n-1. Wash and chop fruits. \n2. Combine Fruits in bowl. \n3. Toss gently to mix. \n4. Serve chilled.",
+        "nutritionalRecommendation": "Focus on whole fruits. The amount of fruit you need to eat depends on age, height, weight, and physical activity.",
+        "foodItem": [
+            {
+                "foodName": "Apple",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Watermelon",
+                "servingSize": "1 Cup Diced",
+                "calories": 46,
+                "fats": 0.2,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 11,
+                "protein": 0.9
+            },
+            {
+                "foodName": "Banana",
+                "servingSize": "1 Medium Banana",
+                "calories": 105,
+                "fats": 0.4,
+                "cholesterol": 0,
+                "sodium": 1,
+                "carbs": 27,
+                "protein": 1.3
+            },
+            {
+                "foodName": "Peach",
+                "servingSize": "1 Medium Peach",
+                "calories": 60,
+                "fats": 0.5,
+                "cholesterol": 0,
+                "sodium": 0,
+                "carbs": 15,
+                "protein": 1
+            },
+            {
+                "foodName": "Stawberry",
+                "servingSize": "1 cup",
+                "calories": 50,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 13,
+                "protein": 1
+            }
         ]
     },
-
     {
-        "foodType":"Vegetables",
-        "foodItem":[
-            {"foodName": "Carrot", "servingSize": "1 Medium Carrot", "calories": 25, "fats": 0.1, "cholesterol": 0, "sodium": 42, "carbs": 6, "protein": 0.6 },
-            {"foodName": "Yellow Squash", "servingSize": "1 Medium Squash", "calories": 32, "fats": 0.4, "cholesterol": 0, "sodium": 4, "carbs": 7, "protein": 2.4 },
-            {"foodName": "White Onion", "servingSize": "1 Raw Medium", "calories": 60, "fats": 0, "cholesterol": 0, "sodium": 5, "carbs": 16, "protein": 1 },
-            {"foodName": "Bell Pepper", "servingSize": "1 Medium", "calories": 24, "fats": 0.2, "cholesterol": 0, "sodium": 4, "carbs": 6, "protein": 1 },
-            {"foodName": "Tomato", "servingSize": "1 Medium Tomato", "calories": 22, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 5, "protein": 1 }
+        "foodType": "Vegetables",
+        "recipe": "Vegetable Stir-Fry Recipe: Ingredients: \n-(Assorted Vegetables e.g., bell peppers, broccoli, carrots, snap peas, mushrooms \n-Garlic, minced\n- Ginger, grated\n- Soy sauce\n Sesame oil\n- Rice or noodles\nInstructions:\n1. Heat sesame oil in a large skillet or wok over medium-high heat.\n2. Add minced garlic and grated ginger, sauté until fragrant.\n3. Add chopped vegetables and stir-fry until tender-crisp.\n4. Drizzle with soy sauce and toss to coat.\n5. Serve over cooked rice or noodles",
+        "nutritionalRecommendation": "Vary your veggies. The amount of food from the Vegetable Group you need to eat depends on age, height, weight, and physical activity.",
+        "foodItem": [
+            {
+                "foodName": "Carrot",
+                "servingSize": "1 Medium Carrot",
+                "calories": 25,
+                "fats": 0.1,
+                "cholesterol": 0,
+                "sodium": 42,
+                "carbs": 6,
+                "protein": 0.6
+            },
+            {
+                "foodName": "Yellow Squash",
+                "servingSize": "1 Medium Squash",
+                "calories": 32,
+                "fats": 0.4,
+                "cholesterol": 0,
+                "sodium": 4,
+                "carbs": 7,
+                "protein": 2.4
+            },
+            {
+                "foodName": "White Onion",
+                "servingSize": "1 Raw Medium",
+                "calories": 60,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 5,
+                "carbs": 16,
+                "protein": 1
+            },
+            {
+                "foodName": "Bell Pepper",
+                "servingSize": "1 Medium",
+                "calories": 24,
+                "fats": 0.2,
+                "cholesterol": 0,
+                "sodium": 4,
+                "carbs": 6,
+                "protein": 1
+            },
+            {
+                "foodName": "Tomato",
+                "servingSize": "1 Medium Tomato",
+                "calories": 22,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 5,
+                "protein": 1
+            }
         ]
     },
-
     {
-        "foodType":"Grains",
-        "foodItem":[
-            {"foodName": "Quinoa", "servingSize": "1 Cup", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Oatmeal", "servingSize": "1 Cup", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Brown Rice", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Popcorn", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Corn", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
+        "foodType": "Grains",
+        "recipe": "Quinoa Salad Recipe:\nIngredients:\n- Cooked quinoa\n- Assorted vegetables (e.g., cherry tomatoes, cucumbers, red onion, bell peppers)\n- Feta cheese, crumbled\n- Fresh herbs (e.g., parsley, mint)\n- Lemon vinaigrette\nInstructions:\n1. In a large bowl, combine cooked quinoa and chopped vegetables.\n2. Add crumbled feta cheese and fresh herbs.\n3. Drizzle with lemon vinaigrette and toss to coat.\n4. Season with salt and pepper to taste.\n5. Serve chilled or at room temperature.",
+        "nutritionalRecommendation": "Vary your grains. The amount of grain foods you need to eat depends on age, height, weight, and physical activity.",
+        "foodItem": [
+            {
+                "foodName": "Quinoa",
+                "servingSize": "1 Cup",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Oatmeal",
+                "servingSize": "1 Cup",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Brown Rice",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Popcorn",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Corn",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            }
         ]
     },
-
-
     {
-        "foodType":"Protein Foods",
-        "foodItem":[
-            {"foodName": "Chicken Breast", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Egg", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Lentils", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Tilapia", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Ground Beef", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
+        "foodType": "Protein Foods",
+        "recipe": "Grilled Chicken Recipe:\nIngredients:\n- Boneless, skinless chicken breasts\n- Olive oil\n- Lemon juice\n- Garlic, minced\n- Herbs (e.g., rosemary, thyme, oregano)\n- Salt and pepper\nInstructions:\n1. In a bowl, mix olive oil, lemon juice, minced garlic, and herbs to make a marinade.\n2. Season chicken breasts with salt and pepper, then add to the marinade. Coat evenly.\n3. Cover and refrigerate for at least 30 minutes, or up to 4 hours.\n4. Preheat grill to medium-high heat.\n5. Grill chicken for 6-8 minutes per side, or until cooked through.\n6. Let chicken rest for a few minutes before serving.",
+        "nutritionalRecommendation": "Vary your proteins. The amount of protein food you need to eat depends on age, height, weight, and physical activity.",
+        "foodItem": [
+            {
+                "foodName": "Chicken Breast",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Egg",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Lentils",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Tilapia",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Ground Beef",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            }
         ]
     },
-
-
     {
-        "foodType":"Dairy",
-        "foodItem":[
-            {"foodName": "Greek Yogurt", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Milk", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Butter", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Heavy Cream", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 },
-            {"foodName": "Cottage Cheese", "servingSize": "1 Medium Apple", "calories": 95, "fats": 0, "cholesterol": 0, "sodium": 2, "carbs": 25, "protein": 0 }
+        "foodType": "Dairy",
+        "recipe": "Greek Yogurt Parfait Recipe:\nIngredients:\n- Greek yogurt\n- Granola\n- Fresh berries (e.g., strawberries, blueberries, raspberries)\n- Honey\nInstructions:\n1. In a glass or bowl, layer Greek yogurt, granola, and fresh berries.\n2. Drizzle honey over the top.\n3. Repeat layers if desired.\n4. Serve immediately as a nutritious breakfast or snack.",
+        "nutritionalRecommendation": "Move to low-fat or fat-free dairy milk or yogurt.  The amount of dairy foods you need to eat depends on age, height, weight, and physical activity.",
+        "foodItem": [
+            {
+                "foodName": "Greek Yogurt",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Milk",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Butter",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Heavy Cream",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            },
+            {
+                "foodName": "Cottage Cheese",
+                "servingSize": "1 Medium Apple",
+                "calories": 95,
+                "fats": 0,
+                "cholesterol": 0,
+                "sodium": 2,
+                "carbs": 25,
+                "protein": 0
+            }
         ]
-    },
-
-
+    }
 ]
