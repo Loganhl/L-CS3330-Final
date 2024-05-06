@@ -1,46 +1,93 @@
-package GroupL.CS3330_Final;
+package FoodItem;
 
 public abstract class Food {
 	
-	private String name;
-	private double calories;
-	private double protein;
-	private double carbohydrates;
-	private double fat;
+    protected String foodType;
+    protected String foodName;
+    protected int calories;
+    protected double fats;
+    protected int cholesterol;
+    protected int sodium;
+    protected int carbohydrates;
+    protected double protein;
+    protected String recipe;
+    protected String nutritionalRecommendation;
 	
 	//constructor
-	public Food (String name, double calories, double protein, double carbohydrates, double fat) {
-		this.name = name;
-		this.calories = calories;
-		this.protein = protein;
-		this.carbohydrates = carbohydrates;
-		this.fat = fat;
-		
-	}
+    public Food(String foodType, String foodName, int calories, double fats, int cholesterol, int sodium, int carbohydrates, double protein, String recipe, String nutritionalRecommendation) {
+        this.foodType = foodType;
+        this.foodName = foodName;
+        this.calories = calories;
+        this.fats = fats;
+        this.cholesterol = cholesterol;
+        this.sodium = sodium;
+        this.carbohydrates = carbohydrates;
+        this.protein = protein;
+        this.recipe = recipe;
+        this.nutritionalRecommendation = nutritionalRecommendation;
+    }
 
-	
-	
-	public Food(Food food) {
-		// TODO Auto-generated constructor stub
-	}
-
-
+    //toString method for printing the food details
+    @Override
+    public String toString() {
+        return "Food:" + foodName +
+        		"\nCalories:" + calories +
+        		"\nFate:" + fats +
+        		"\nCholesterol:" + cholesterol +
+        		"\nsodium:" + sodium +
+        		"\nCarbohydrates:" + carbohydrates +
+        		"\nProtein:" + protein +
+        		"\nRecipe:" + recipe +
+        		"\nNutritional Recommendation:" + nutritionalRecommendation;
+    }
 
 	//Getter and Setter
 	public String getName() {
-		return name;
+		return foodName;
 	}
 	
 	public void setName(String name) {
-		this.name = name;
+		this.foodName = name;
 	}
 	
 	public double getCalories() {
 		return calories;
 	}
 	
-	public void setCalories(double calories) {
+	public void setCalories(int calories) {
 		this.calories = calories;
+	}
+	
+	public double getFat() {
+		return fats;
+	}
+	
+	public void setFat(double fat) {
+		this.fats = fat;
+	}
+	
+	public double getCholesterol() {
+		return cholesterol;
+	}
+	
+	public void setCholesterol(int cholesterol) {
+		this.cholesterol = cholesterol;
+	}
+	
+	public double getSodium() {
+		return sodium;
+	}
+	
+	public void setSodium(int sodium) {
+		this.sodium = sodium;
+	}
+	
+	public double getCarbs() {
+		return carbohydrates;
+	}
+	
+	public void setCarbs(int carbohydrates) {
+		this.carbohydrates = carbohydrates;
 	}
 	
 	public double getProtein() {
@@ -50,54 +97,7 @@ public abstract class Food {
 	public void setProtein(double protein) {
 		this.protein = protein;
 	}
-	
-	public double getCarbohydrates() {
-		return carbohydrates;
-	}
-	
-	public void setCarbohydrates(double carbohydrates) {
-		this.carbohydrates = carbohydrates;
-	}
-	
-	public double getFat() {
-		return fat;
-	}
-	
-	public void setFat(double fat) {
-		this.fat = fat;
-	}
 }
-
-//subclasses 
- class Fruits extends Food{
-	public Fruits (Food food) {
-		super(food);
-	}
-}
- 
- class Vegetables extends Food{
-	 public Vegetables (Food food) {
-		 super(food);
-	 }
- }
- 
- class Grains extends Food{
-	 public Grains(Food food) {
-		 super(food);	 
-	}
- }
- 
- class ProteinFoods extends Food{
-	 public ProteinFoods(Food food) {
-		 super(food);
-	 }
- }
- 
- class Dairy extends Food{
-	 public Dairy(Food food) {
-		 super(food);
-	 }
- }
 
 
 
