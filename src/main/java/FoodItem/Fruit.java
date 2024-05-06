@@ -22,6 +22,15 @@ public static void printFruitRecipes() {
 
 // Method that prints nutritional Values based off of .json values.
 
+
+public static void printNutritionalRecomendations() {
+    
+    System.out.println("===============================");
+    System.out.println("Recommendation abcd.");
+    System.out.println("===============================");
+}
+
+
 //Method that prints common recipe's with fruits based off of .json values.
 
 }
