@@ -1,82 +1,183 @@
 package FoodItem;
 
-import com.google.gson.*;
-import java.lang.reflect.Type;
-import java.nio.file.Files;
-import java.io.IOException;
-import java.nio.file.Paths;
-
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class FoodManager {
-    private Gson gson;
 
-    public FoodManager() {
-        // Create Gson instance with custom deserializer
-        gson = new GsonBuilder().registerTypeAdapter(Food.class, new FoodDeserializer()).create();
-    }
+	private String foodFilePath = "src/foodList.csv";
+	public ArrayList<Food> foodList;
 
-    public Food parseFoodFromFile(String fileName) throws IOException {
-        // Read JSON string from file
-        String jsonString = new String(Files.readAllBytes(Paths.get(fileName)));
+	
+	public boolean initializeFood() {
 
-        // Parse JSON string to Food object
-        return gson.fromJson(jsonString, Food.class);
-    }
-
-    // Custom deserializer to handle parsing of subclasses
-    private static class FoodDeserializer implements JsonDeserializer<Food> {
-        @Override
-        public Food deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-            JsonObject jsonObject = json.getAsJsonObject();
-            String foodType = jsonObject.get("foodType").getAsString();
-
-            switch (foodType) {
-                case "Fruit":
-                    return context.deserialize(jsonObject, Fruit.class);
-                case "Vegetables":
-                    return context.deserialize(jsonObject, Vegetables.class);
-                case "Grains":
-                    return context.deserialize(jsonObject, Grains.class);
-                case "Protein Foods":
-                    return context.deserialize(jsonObject, Protein.class);
-                case "Dairy":
-                    return context.deserialize(jsonObject, Dairy.class);
-
-                // Handle other food types if necessary
-                default:
-                    throw new JsonParseException("Unknown food type: " + foodType);
+		try {
+			//Sets the file and count variable.
+            File file = new File(foodFilePath);
+            Scanner scanner = new Scanner(file);
+            int count = 0;
+            
+            // Error testing to ensure information is being passed.
+            if (scanner.hasNextLine()) {
+                scanner.nextLine();
+            } else {
+                System.out.println("Inventory file is empty.");
+                scanner.close();
+                return false;
             }
-        }
-    }
-    
-public static void addFood(String userInput) {
-    	
-        // Splits the user's input into individual values.
-        String[] foodData = userInput.split(",");
-        
-        // Check if the user's input contains all needed values.
-        if (foodData.length == 8) {
-        	
-            // Extract food information from the array
-            String foodGroup = foodData[0].trim();
-            String foodName = foodData[1].trim();
-            int calories = Integer.parseInt(foodData[2].trim());
-            double fats = Double.parseDouble(foodData[3].trim());
-            int cholesterol = Integer.parseInt(foodData[4].trim());
-            int sodium = Integer.parseInt(foodData[5].trim());
-            int carbohydrates = Integer.parseInt(foodData[6].trim());
-            double protein = Double.parseDouble(foodData[7].trim());
 
-            // Create a Food object.
-            Food food = new Food(foodGroup, foodName, calories, fats, cholesterol, sodium, carbohydrates, protein);
+            //Adds to the count integer to create an array the sized of the file being read.
+            while (scanner.hasNextLine()) {
+                scanner.nextLine();
+                count++;
+            }
+
+            scanner.close();
             
-            // Code to add the food to the json file.
+            scanner = new Scanner(file);
             
-            // Prints the added food.
-            System.out.println("Food added:");
-            System.out.println(food);
-        } else {
-            System.out.println("Invalid input. Please make sure to enter all food information correctly..");
-        }
-    }
+            //Skipping first line.
+            if (scanner.hasNextLine()) {
+                scanner.nextLine(); 
+            }
+            
+            foodList = new ArrayList<Food>();
+            
+            //Adding values to the object.
+            for (int i = 0; i < count; i++) {
+                String[] parts = scanner.nextLine().split(",");
+                
+         
+                
+                String foodType = parts[0];
+                String foodName = parts[1];
+                String servingSize = parts[2];
+                double calories = Double.parseDouble(parts[3]);
+                double fats = Double.parseDouble(parts[4]);
+                double cholesterol = Double.parseDouble(parts[5]);
+                double sodium = Double.parseDouble(parts[6]);
+                double carbs = Double.parseDouble(parts[7]);
+                double protein = Double.parseDouble(parts[8]);
+
+
+                switch (foodType) {
+                    case "Fruit":
+                        foodList.add(new Fruit(foodName, servingSize, calories, fats, cholesterol, sodium, carbs, protein));
+                        break;
+                    case "Vegetables":
+                    	foodList.add(new Vegetables(foodName, servingSize, calories, fats, cholesterol, sodium, carbs, protein));
+                        break;
+                    case "Grains":
+                    	foodList.add(new Grains(foodName, servingSize, calories, fats, cholesterol, sodium, carbs, protein));
+                        break;
+                    case "Protein":
+                    	foodList.add(new Protein(foodName, servingSize, calories, fats, cholesterol, sodium, carbs, protein));
+                        break;
+                    case "Dairy":
+                    	foodList.add(new Dairy(foodName, servingSize, calories, fats, cholesterol, sodium, carbs, protein));
+                    	break;
+                }
+
+            }
+
+            scanner.close();
+            
+            return true;
+	        
+		} catch (Exception e){
+			System.out.println(e);
+			return false;
+		}
+	}
+	
+	public void displayAllFruitInformation() {
+		boolean fruitFound = false;
+		
+		System.out.println("Fruit information: ");
+		for (Food food : foodList) {
+			if(food instanceof Fruit) {
+				Fruit fruit = (Fruit) food;
+				System.out.println(fruit.toString());
+                System.out.println("-----------------------------");
+                fruitFound = true;
+			}
+		}
+		
+		if (!fruitFound) {
+			System.out.println("No fruit found in inventory.");
+		}
+	}
+	
+	public void displayAllVegetablesInformation() {
+		boolean vegetableFound = false;
+		
+		System.out.println("Vegetable information: ");
+		for (Food food : foodList) {
+			if(food instanceof Fruit) {
+				Vegetables vegetable = (Vegetables) food;
+				System.out.println(vegetable.toString());
+                System.out.println("-----------------------------");
+                vegetableFound = true;
+			}
+		}
+		
+		if (!vegetableFound) {
+			System.out.println("No vegetables found in inventory.");
+		}
+	}
+	
+	public void displayAllGrainsInformation() {
+		boolean grainsFound = false;
+		
+		System.out.println("Grain information: ");
+		for (Food food : foodList) {
+			if(food instanceof Grains) {
+				Grains grain = (Grains) food;
+				System.out.println(grain.toString());
+                System.out.println("-----------------------------");
+                grainsFound = true;
+			}
+		}
+		
+		if (!grainsFound) {
+			System.out.println("No grains found in inventory.");
+		}
+	}
+	
+	public void displayAllProteinInformation() {
+		boolean proteinFound = false;
+		
+		System.out.println("Protein Foods information: ");
+		for (Food food : foodList) {
+			if(food instanceof Protein) {
+				Protein protein = (Protein) food;
+				System.out.println(protein.toString());
+                System.out.println("-----------------------------");
+                proteinFound = true;
+			}
+		}
+		
+		if (!proteinFound) {
+			System.out.println("No protein foods found in inventory.");
+		}
+	}
+	
+	public void displayAllDairyInformation() {
+		boolean dairyFound = false;
+		
+		System.out.println("Fruit information: ");
+		for (Food food : foodList) {
+			if(food instanceof Dairy) {
+				Dairy dairy = (Dairy) food;
+				System.out.println(dairy.toString());
+                System.out.println("-----------------------------");
+                dairyFound = true;
+			}
+		}
+		
+		if (!dairyFound) {
+			System.out.println("No fruit found in inventory.");
+		}
+	}
 }
