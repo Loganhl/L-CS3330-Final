@@ -3,6 +3,7 @@ package GroupL.CS3330_Final;
 import java.util.Scanner;
 
 import FoodItem.Food;
+import FoodItem.Fruit;
 
 public class menu {
     
@@ -71,14 +72,14 @@ public class menu {
         // Display information about Fruits.
         System.out.println("===============================");
         System.out.println("Fruit");
-        System.out.println("Fruit provides minerals, nutrients, and fibers that our body needs!\n");
+        Fruit.printFruitRecipes();
         System.out.println("\n");
         
         System.out.println("Common Foods:");
         //Method that takes common fruit names.
         
         System.out.println("\nFruit Rich Meals:");
-        //Method that show's meals.
+        Fruit.printFruitRecipes();
         
         System.out.println("\nTo receive more information regarding a specific fruit, type the name of the fruit below as listed above.");
         // Method checks if the user's input matches a name of a fruit on the json file.
