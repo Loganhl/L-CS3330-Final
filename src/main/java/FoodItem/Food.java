@@ -5,17 +5,17 @@ public abstract class Food {
     protected String foodType;
     protected String foodName;
     protected String servingSize;
-    protected int calories;
+    protected double calories;
     protected double fats;
-    protected int cholesterol;
-    protected int sodium;
-    protected int carbohydrates;
+    protected double cholesterol;
+    protected double sodium;
+    protected double carbohydrates;
     protected double protein;
     protected String recipe;
     protected String nutritionalRecommendation;
 	
 	//constructor
-    public Food(String foodType, String foodName, String servingSize, int calories, double fats, int cholesterol, int sodium, int carbohydrates, double protein, String recipe, String nutritionalRecommendation) {
+    public Food(String foodType, String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein, String recipe, String nutritionalRecommendation) {
         this.foodType = foodType;
         this.foodName = foodName;
         this.servingSize = servingSize;
@@ -67,7 +67,7 @@ public abstract class Food {
 		return calories;
 	}
 	
-	public void setCalories(int calories) {
+	public void setCalories(double calories) {
 		this.calories = calories;
 	}
 	
@@ -83,7 +83,7 @@ public abstract class Food {
 		return cholesterol;
 	}
 	
-	public void setCholesterol(int cholesterol) {
+	public void setCholesterol(double cholesterol) {
 		this.cholesterol = cholesterol;
 	}
 	
@@ -91,7 +91,7 @@ public abstract class Food {
 		return sodium;
 	}
 	
-	public void setSodium(int sodium) {
+	public void setSodium(double sodium) {
 		this.sodium = sodium;
 	}
 	
@@ -99,7 +99,7 @@ public abstract class Food {
 		return carbohydrates;
 	}
 	
-	public void setCarbs(int carbohydrates) {
+	public void setCarbs(double carbohydrates) {
 		this.carbohydrates = carbohydrates;
 	}
 	
