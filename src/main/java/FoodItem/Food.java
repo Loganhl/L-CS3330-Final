@@ -1,10 +1,15 @@
 package FoodItem;
 
-public class Food {
+public abstract class Food {
+	protected String foodType;
+	protected int calories;
+	protected double fats;
+	protected int cholesterol;
+	protected int sodium;
+	protected int carbs;
+	protected int protein;
+	protected String recipe;
+	protected String nutritionalRecommendation;
 
-	public Food(String foodGroup, String foodName, int calories, double fats, int cholesterol, int sodium,
-			int carbohydrates, double protein) {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 }
