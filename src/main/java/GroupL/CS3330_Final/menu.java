@@ -7,7 +7,7 @@ import FoodItem.Fruit;
 
 public class menu {
     
-    public static void start(String[] args) {
+    public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
         boolean displayMenu = true;
