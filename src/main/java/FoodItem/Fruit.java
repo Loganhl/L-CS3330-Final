@@ -11,7 +11,7 @@ public Fruit(String foodName, String servingSize, double calories, double fats, 
 // Method that prints all of the Fruits
 
 public static void printFruitRecipes() {
-    // Here you can define and print common recipes using fruits based on the JSON values
+    
     System.out.println("===============================");
     System.out.println("Common Fruit Recipes:");
     System.out.println("1. Fruit Salad");
@@ -21,6 +21,15 @@ public static void printFruitRecipes() {
 }
 
 // Method that prints nutritional Values based off of .json values.
+
+
+public static void printNutritionalRecomendations() {
+    
+    System.out.println("===============================");
+    System.out.println("Recommendation abcd.");
+    System.out.println("===============================");
+}
+
 
 //Method that prints common recipe's with fruits based off of .json values.
 
