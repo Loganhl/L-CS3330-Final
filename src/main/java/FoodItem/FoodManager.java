@@ -7,6 +7,9 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonDeserializationContext;
 import java.lang.reflect.Type;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class FoodManager {
     private Gson gson;
@@ -16,7 +19,10 @@ public class FoodManager {
         gson = new GsonBuilder().registerTypeAdapter(Food.class, new FoodDeserializer()).create();
     }
 
-    public Food parseFood(String jsonString) {
+    public Food parseFoodFromFile(String fileName) throws IOException {
+        // Read JSON string from file
+        String jsonString = new String(Files.readAllBytes(Paths.get(fileName)));
+        
         // Parse JSON string to Food object
         return gson.fromJson(jsonString, Food.class);
     }
