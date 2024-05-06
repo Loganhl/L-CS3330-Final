@@ -48,4 +48,35 @@ public class FoodManager {
             }
         }
     }
+    
+public static void addFood(String userInput) {
+    	
+        // Splits the user's input into individual values.
+        String[] foodData = userInput.split(",");
+        
+        // Check if the user's input contains all needed values.
+        if (foodData.length == 8) {
+        	
+            // Extract food information from the array
+            String foodGroup = foodData[0].trim();
+            String foodName = foodData[1].trim();
+            int calories = Integer.parseInt(foodData[2].trim());
+            double fats = Double.parseDouble(foodData[3].trim());
+            int cholesterol = Integer.parseInt(foodData[4].trim());
+            int sodium = Integer.parseInt(foodData[5].trim());
+            int carbohydrates = Integer.parseInt(foodData[6].trim());
+            double protein = Double.parseDouble(foodData[7].trim());
+
+            // Create a Food object.
+            Food food = new Food(foodGroup, foodName, calories, fats, cholesterol, sodium, carbohydrates, protein);
+            
+            // Code to add the food to the json file.
+            
+            // Prints the added food.
+            System.out.println("Food added:");
+            System.out.println(food);
+        } else {
+            System.out.println("Invalid input. Please make sure to enter all food information correctly..");
+        }
+    }
 }
