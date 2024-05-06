@@ -4,6 +4,7 @@ public abstract class Food {
 	
     protected String foodType;
     protected String foodName;
+    protected String servingSize;
     protected int calories;
     protected double fats;
     protected int cholesterol;
@@ -14,9 +15,10 @@ public abstract class Food {
     protected String nutritionalRecommendation;
 	
 	//constructor
-    public Food(String foodType, String foodName, int calories, double fats, int cholesterol, int sodium, int carbohydrates, double protein, String recipe, String nutritionalRecommendation) {
+    public Food(String foodType, String foodName, String servingSize, int calories, double fats, int cholesterol, int sodium, int carbohydrates, double protein, String recipe, String nutritionalRecommendation) {
         this.foodType = foodType;
         this.foodName = foodName;
+        this.servingSize = servingSize;
         this.calories = calories;
         this.fats = fats;
         this.cholesterol = cholesterol;
@@ -27,10 +29,13 @@ public abstract class Food {
         this.nutritionalRecommendation = nutritionalRecommendation;
     }
 
-    //toString method for printing the food details
+   
+
+	//toString method for printing the food details
     @Override
     public String toString() {
         return "Food:" + foodName +
+        		"\nServing Size:" + servingSize +
         		"\nCalories:" + calories +
         		"\nFate:" + fats +
         		"\nCholesterol:" + cholesterol +
@@ -47,6 +52,14 @@ public abstract class Food {
 	}
 	
 	public void setName(String name) {
+		this.foodName = name;
+	}
+	
+	public String getServing() {
+		return foodName;
+	}
+	
+	public void setServing(String name) {
 		this.foodName = name;
 	}
 	
