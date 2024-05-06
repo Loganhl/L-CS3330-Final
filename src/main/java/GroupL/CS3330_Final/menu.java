@@ -2,6 +2,8 @@ package GroupL.CS3330_Final;
 
 import java.util.Scanner;
 
+import FoodItem.Food;
+
 public class menu {
     
     public static void start(String[] args) {
@@ -119,12 +121,53 @@ public class menu {
     
     //Adds a new fruit to the foodList.json
     private static void addFoodMenu() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("===============================");
         System.out.println("Add Food\n");
         System.out.println("To add a food, enter the information as displayed below.");
         System.out.println("foodgroup,foodname,calories,fats,cholesterol,sodium,carbohydrates,protein");
-        System.out.println("Apricot,One Raw,17,0,0,0,4,0");
+        System.out.println("fruits,Apricot,One Raw,17,0,0,0,4,0");
+        System.out.println("Food group name must be protein, fruits, vegetables, grains, or dairy.");
         System.out.println("===============================");
+
+        // Read user input
+        String userInput = scanner.nextLine();
         
+        // Pass the user input to the addFood method
+        addFood(userInput);
     }
+    
+    
+    // TEMPORARY LOCATION OF METHOD
+    private static void addFood(String userInput) {
+    	
+        // Splits the user's input into individual values.
+        String[] foodData = userInput.split(",");
+        
+        // Check if the user's input contains all needed values.
+        if (foodData.length == 8) {
+        	
+            // Extract food information from the array
+            String foodGroup = foodData[0].trim();
+            String foodName = foodData[1].trim();
+            int calories = Integer.parseInt(foodData[2].trim());
+            double fats = Double.parseDouble(foodData[3].trim());
+            int cholesterol = Integer.parseInt(foodData[4].trim());
+            int sodium = Integer.parseInt(foodData[5].trim());
+            int carbohydrates = Integer.parseInt(foodData[6].trim());
+            double protein = Double.parseDouble(foodData[7].trim());
+
+            // Create a Food object.
+            Food food = new Food(foodGroup, foodName, calories, fats, cholesterol, sodium, carbohydrates, protein);
+            
+            // Code to add the food to the json file.
+            
+            // Prints the added food.
+            System.out.println("Food added:");
+            System.out.println(food);
+        } else {
+            System.out.println("Invalid input. Please make sure to enter all food information correctly..");
+        }
+    }
+    
 }
