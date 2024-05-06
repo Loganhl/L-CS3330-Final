@@ -77,7 +77,7 @@ public class menu {
         System.out.println("\n");
         
         System.out.println("Common Foods:");
-        //Method that takes common fruit names.
+        // Print Fruit Names
         
         System.out.println("\nFruit Rich Meals:");
         Fruit.printFruitRecipes();

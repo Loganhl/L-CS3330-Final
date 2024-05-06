@@ -8,7 +8,9 @@ public Fruit(String foodName, String servingSize, double calories, double fats, 
 
 
 
-// Method that prints all of the Fruits
+// Method that prints all of the Fruit Names
+
+
 
 public static void printFruitRecipes() {
     
