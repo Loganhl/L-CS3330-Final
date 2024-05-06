@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class menu {
     
-    public static void main(String[] args) {
+    public static void start(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
         boolean displayMenu = true;
@@ -34,7 +34,7 @@ public class menu {
                     displayProteinFoodsMenu();
                     break;
                 case "6":
-                    addFood();
+                    addFoodMenu();
                     break;
                 case "7":
                     displayMenu = false;
@@ -118,12 +118,13 @@ public class menu {
     }
     
     //Adds a new fruit to the foodList.json
-    private static void addFood() {
+    private static void addFoodMenu() {
         System.out.println("===============================");
         System.out.println("Add Food\n");
         System.out.println("To add a food, enter the information as displayed below.");
         System.out.println("foodgroup,foodname,calories,fats,cholesterol,sodium,carbohydrates,protein");
         System.out.println("Apricot,One Raw,17,0,0,0,4,0");
         System.out.println("===============================");
+        
     }
 }
