@@ -296,7 +296,7 @@ public class menu {
     }
     
     private static void removeFoodMenu() {
-    	Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("===============================");
         System.out.println("Remove Food\n");
         System.out.println("To remove a food, enter the name of the food.");
@@ -310,14 +310,13 @@ public class menu {
         
         if (!foodManager.initializeFood()) {
             System.out.println("Failed to initialize food data. Exiting.");
-            scanner.close();
             return;
         }
 
         // Pass the user input to the removeFood method of the foodManager instance
         foodManager.removeFood(userInput);
-        scanner.close();
     }
+
     
 public class Testing {
         
@@ -327,5 +326,5 @@ public class Testing {
             boolean result = foodManager.initializeFood();
             assertEquals(true, result);
         }
-       
+}
 }
