@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FoodManager {
 
-	private String foodFilePath = "src/foodList.csv";
+	private String foodFilePath = "src/main/java/foodList.csv";
 	public ArrayList<Food> foodList;
 
 	
