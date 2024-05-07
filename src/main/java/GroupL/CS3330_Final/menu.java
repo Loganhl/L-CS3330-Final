@@ -5,6 +5,7 @@ import java.util.Scanner;
 import FoodItem.Food;
 import FoodItem.FoodManager;
 import FoodItem.Fruit;
+import FoodItem.*;
 
 public class menu {
     
@@ -35,7 +36,7 @@ public class menu {
                     displayGrainsMenu();
                     break;
                 case "5":
-                    displayProteinFoodsMenu();
+                    displayProteinsMenu();
                     break;
                 case "6":
                     addFoodMenu();
@@ -110,19 +111,143 @@ public class menu {
 
     
     private static void displayVegetablesMenu() {
+        // Display information about Vegetables.
+        System.out.println("===============================");
+        System.out.println("Vegetables");
+        Vegetables.printVegetableNutritionalRecomendations();
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Initialize foodList
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
+        System.out.println("\nVegetables Rich Meals:");
+        Vegetables.printVegetableRecipes();
         
+        System.out.println("\nCommon Foods:");
+        foodManager.displayAllVegetablesInformation();
+        System.out.println("===============================");
+
+        // Ask the user if they want to return to the main menu
+        System.out.println("Type 'menu' to return to the main menu or 'exit' to exit the program.");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        //Takes user input.
+        if (userInput.equalsIgnoreCase("menu")) {
+            return;
+        } else if (userInput.equalsIgnoreCase("exit")) {
+            System.exit(0);
+        } else {
+            System.out.println("Invalid input. Returning to main menu.");
+        }
     }
     
     private static void displayDairyMenu() {
+        // Display information about Fruits.
+        System.out.println("===============================");
+        System.out.println("Dairy");
+        Dairy.printDairyNutritionalRecomendations();
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Initialize foodList
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
+        System.out.println("\nDairy Rich Meals:");
+        Dairy.printDairyRecipes();
         
+        System.out.println("\nCommon Foods:");
+        foodManager.displayAllDairyInformation();
+        System.out.println("===============================");
+
+        // Ask the user if they want to return to the main menu
+        System.out.println("Type 'menu' to return to the main menu or 'exit' to exit the program.");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        //Takes user input.
+        if (userInput.equalsIgnoreCase("menu")) {
+            return;
+        } else if (userInput.equalsIgnoreCase("exit")) {
+            System.exit(0);
+        } else {
+            System.out.println("Invalid input. Returning to main menu.");
+        }
     }
     
     private static void displayGrainsMenu() {
+        // Display information about Grains.
+        System.out.println("===============================");
+        System.out.println("Grains");
+        Grains.printGrainNutritionalRecomendations();
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Initialize foodList
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
+        System.out.println("\nGrains Rich Meals:");
+        Grains.printGrainsRecipes();
         
+        System.out.println("\nCommon Foods:");
+        foodManager.displayAllGrainsInformation();
+        System.out.println("===============================");
+
+        // Ask the user if they want to return to the main menu
+        System.out.println("Type 'menu' to return to the main menu or 'exit' to exit the program.");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        //Takes user input.
+        if (userInput.equalsIgnoreCase("menu")) {
+            return;
+        } else if (userInput.equalsIgnoreCase("exit")) {
+            System.exit(0);
+        } else {
+            System.out.println("Invalid input. Returning to main menu.");
+        }
     }
     
-    private static void displayProteinFoodsMenu() {
+    private static void displayProteinsMenu() {
+        // Display information about Proteins.
+        System.out.println("===============================");
+        System.out.println("Protein");
+        Protein.printProteinNutritionalRecomendations();
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Initialize foodList
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
+        System.out.println("\nProtein Rich Meals:");
+        Protein.printProteinRecipes();
         
+        System.out.println("\nCommon Foods:");
+        foodManager.displayAllProteinInformation();
+        System.out.println("===============================");
+
+        // Ask the user if they want to return to the main menu
+        System.out.println("Type 'menu' to return to the main menu or 'exit' to exit the program.");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        //Takes user input.
+        if (userInput.equalsIgnoreCase("menu")) {
+            return;
+        } else if (userInput.equalsIgnoreCase("exit")) {
+            System.exit(0);
+        } else {
+            System.out.println("Invalid input. Returning to main menu.");
+        }
     }
     
     //Adds a new fruit to the foodList.json
