@@ -16,7 +16,7 @@ public static void printGrainsRecipes() {
 // Method that prints nutritional Values based off of .json values.
 
 
-public static void printFruitNutritionalRecomendations () {
+public static void printGrainNutritionalRecomendations () {
     
 
     System.out.println("Vary your grains. The amount of grain foods you need to eat depends on age, height, weight, and physical activity.)");
