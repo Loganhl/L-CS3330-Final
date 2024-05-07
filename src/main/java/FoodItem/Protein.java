@@ -16,9 +16,9 @@ public Protein(String foodName, String servingSize, double calories, double fats
 // Method that prints nutritional Values based off of .json values.
 
 
-public static void printFruitNutritionalRecomendations () {
+public static void printProteinNutritionalRecomendations () {
     
 
-    System.out.println("Vary your veggies. The amount of food from the Vegetable Group you need to eat depends on age, height, weight, and physical activity.");
+    System.out.println("Vary your proteins. The amount of protein food you need to eat depends on age, height, weight, and physical activity.");
   }	
 }
