@@ -73,26 +73,17 @@ public class menu {
         // Display information about Fruits.
         System.out.println("===============================");
         System.out.println("Fruit");
-        Fruit.printFruitRecipes();
-        System.out.println("\n");
-        
-        System.out.println("Common Foods:");
-        // Print Fruit Names
-        
+        Fruit.printFruitNutritionalRecomendations();
+        System.out.println("\nCommon Foods:");
+        FoodManager.displayAllFruitInformation();
         System.out.println("\nFruit Rich Meals:");
         Fruit.printFruitRecipes();
-        
-        System.out.println("\nTo receive more information regarding a specific fruit, type the name of the fruit below as listed above.");
-        // Method checks if the user's input matches a name of a fruit on the json file.
         System.out.println("===============================");
-        
+      
         // Ask the user if they want to return to the main menu
         System.out.println("Type 'menu' to return to the main menu or 'exit' to exit the program.");
-        
-        
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
-        
         //Takes user input.
         if (userInput.equalsIgnoreCase("menu")) {
             return;
@@ -101,8 +92,6 @@ public class menu {
         } else {
             System.out.println("Invalid input. Returning to main menu.");
         }
-        
-        
     }
     
     private static void displayVegetablesMenu() {
@@ -139,8 +128,6 @@ public class menu {
         FoodManager.addFood(userInput);
     }
     
-    
-    // TEMPORARY LOCATION OF METHOD
     
     
 }

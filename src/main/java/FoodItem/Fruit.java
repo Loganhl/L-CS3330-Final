@@ -14,22 +14,21 @@ public Fruit(String foodName, String servingSize, double calories, double fats, 
 
 public static void printFruitRecipes() {
     
-    System.out.println("===============================");
-    System.out.println("Common Fruit Recipes:");
+
     System.out.println("1. Fruit Salad");
     System.out.println("2. Smoothie");
     System.out.println("3. Fruit Parfait");
-    System.out.println("===============================");
+
 }
 
 // Method that prints nutritional Values based off of .json values.
 
 
-public static void printNutritionalRecomendations() {
+public static void printFruitNutritionalRecomendations () {
     
-    System.out.println("===============================");
+
     System.out.println("Recommendation abcd.");
-    System.out.println("===============================");
+
 }
 
 
