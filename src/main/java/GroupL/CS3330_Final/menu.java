@@ -74,12 +74,22 @@ public class menu {
         System.out.println("===============================");
         System.out.println("Fruit");
         Fruit.printFruitNutritionalRecomendations();
-        System.out.println("\nCommon Foods:");
-        FoodManager.displayAllFruitInformation();
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Initialize foodList
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
         System.out.println("\nFruit Rich Meals:");
         Fruit.printFruitRecipes();
+        
+        System.out.println("\nCommon Foods:");
+        foodManager.displayAllFruitInformation();
         System.out.println("===============================");
-      
+
         // Ask the user if they want to return to the main menu
         System.out.println("Type 'menu' to return to the main menu or 'exit' to exit the program.");
         Scanner scanner = new Scanner(System.in);
@@ -93,6 +103,7 @@ public class menu {
             System.out.println("Invalid input. Returning to main menu.");
         }
     }
+
     
     private static void displayVegetablesMenu() {
         
