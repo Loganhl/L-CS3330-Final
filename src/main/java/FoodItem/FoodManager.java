@@ -10,13 +10,22 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-
+/**
+ * The FoodManager class manages the inventory of food items.
+ */
 public class FoodManager {
 
+    /** The file path for the food inventory CSV file. */
 	private String foodFilePath = "src/main/java/foodList.csv";
+	
+    /** The list of food items in the inventory. */
 	public ArrayList<Food> foodList;
 
-	
+    /**
+     * Initializes the food inventory by reading data from a CSV file.
+     *
+     * @return true if the initialization is successful, false otherwise.
+     */
 	public boolean initializeFood() {
 
 		try {
@@ -98,6 +107,9 @@ public class FoodManager {
 		}
 	}
 	
+    /**
+     * Displays all fruit information in the inventory.
+     */
 	public void displayAllFruitInformation() {
 		boolean fruitFound = false;
 		
@@ -115,6 +127,9 @@ public class FoodManager {
 		}
 	}
 	
+    /**
+     * Displays all vegetable information in the inventory.
+     */
 	public void displayAllVegetablesInformation() {
 		boolean vegetableFound = false;
 		
@@ -132,6 +147,9 @@ public class FoodManager {
 		}
 	}
 	
+    /**
+     * Displays all grains information in the inventory.
+     */
 	public void displayAllGrainsInformation() {
 		boolean grainsFound = false;
 		
@@ -149,6 +167,9 @@ public class FoodManager {
 		}
 	}
 	
+    /**
+     * Displays all protein information in the inventory.
+     */
 	public void displayAllProteinInformation() {
 		boolean proteinFound = false;
 		
@@ -166,6 +187,9 @@ public class FoodManager {
 		}
 	}
 	
+    /**
+     * Displays all dairy information in the inventory.
+     */
 	public void displayAllDairyInformation() {
 		boolean dairyFound = false;
 		
@@ -183,7 +207,9 @@ public class FoodManager {
 		}
 	}
 
-	//method to find food with the highest calories 
+    /**
+     * Displays the food item with the highest calories
+     */
 	public void printFoodWithHighestCalories() {
 
 	    Food foodWithHighestCalories = foodList.get(0);
@@ -200,7 +226,11 @@ public class FoodManager {
 	    System.out.println(foodWithHighestCalories.toString());
 	}
 	
-	//Method to add Food.
+    /**
+     * Adds a new food item to the inventory based on user input.
+     *
+     * @param userInput the user input containing information about the food item
+     */
 	public void addFood(String userInput) {
 	    // Splits the user Input.
 	    String[] parts = userInput.split(",");
@@ -261,7 +291,11 @@ public class FoodManager {
 	}
 
 	
-	//Method to remove a food item
+    /**
+     * Removes a food item from the inventory based on user input.
+     *
+     * @param userInput the name of the food item to be removed
+     */
 	public void removeFood(String userInput) {
 
 	    Food foodToRemove = null;

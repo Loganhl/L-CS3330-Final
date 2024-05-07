@@ -1,5 +1,8 @@
 package FoodItem;
 
+/**
+ * The abstract class representing a food item.
+ */
 public abstract class Food {
 	
     protected String foodName;
@@ -11,7 +14,18 @@ public abstract class Food {
     protected double carbohydrates;
     protected double protein;
 
-	//constructor
+    /**
+     * Constructor to create a new Food object with specified attributes.
+     *
+     * @param foodName      The name of the food.
+     * @param servingSize   The serving size of the food.
+     * @param calories      The number of calories in the food.
+     * @param fats          The amount of fats in the food.
+     * @param cholesterol   The amount of cholesterol in the food.
+     * @param sodium        The amount of sodium in the food.
+     * @param carbohydrates The amount of carbohydrates in the food.
+     * @param protein       The amount of protein in the food.
+     */
     public Food(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
         this.foodName = foodName;
         this.servingSize = servingSize;
@@ -26,14 +40,18 @@ public abstract class Food {
 
    
 
-	//toString method for printing the food details
+    /**
+     * Returns a string representation of the food item.
+     *
+     * @return A string containing the food name, serving size, and nutritional information.
+     */
     @Override
     public String toString() {
         return foodName + " - " + servingSize +
         		"\nCalories: " + calories +", Fats: " + fats + ", Cholesterol: " + cholesterol + ", Sodium: " + sodium + ", Carbohydrates: " + carbohydrates + ", Protein: " + protein;
     }
 
-	//Getter and Setter
+	//Getter and Setter methods
 	public String getName() {
 		return foodName;
 	}
