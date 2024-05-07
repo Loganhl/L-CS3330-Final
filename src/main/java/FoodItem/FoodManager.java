@@ -184,23 +184,20 @@ public class FoodManager {
 	}
 
 	//method to find food with the highest calories 
-	public Food getFoodWithHighestCalories() {
-	    if (foodList == null || foodList.isEmpty()) {
-	        System.out.println("No food items available.");
-	        return null;
-	    }
-	
+	public void printFoodWithHighestCalories() {
+
 	    Food foodWithHighestCalories = foodList.get(0);
 	    double highestCalories = foodWithHighestCalories.getCalories();
-	
+
 	    for (Food food : foodList) {
 	        if (food.getCalories() > highestCalories) {
 	            highestCalories = food.getCalories();
 	            foodWithHighestCalories = food;
 	        }
 	    }
-	
-	    return foodWithHighestCalories;
+
+	    System.out.println("Food with the highest calories:");
+	    System.out.println(foodWithHighestCalories.toString());
 	}
 	
 	//Method to add Food.
@@ -266,10 +263,6 @@ public class FoodManager {
 	
 	//Method to remove a food item
 	public void removeFood(String userInput) {
-	    if (foodList == null || foodList.isEmpty()) {
-	        System.out.println("No food items to remove.");
-	        return;
-	    }
 
 	    Food foodToRemove = null;
 	    for (Food food : foodList) {
