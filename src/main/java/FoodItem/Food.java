@@ -2,7 +2,6 @@ package FoodItem;
 
 public abstract class Food {
 	
-    protected String foodType;
     protected String foodName;
     protected String servingSize;
     protected double calories;
@@ -13,8 +12,7 @@ public abstract class Food {
     protected double protein;
 
 	//constructor
-    public Food(String foodType, String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
-        this.foodType = foodType;
+    public Food(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
         this.foodName = foodName;
         this.servingSize = servingSize;
         this.calories = calories;
