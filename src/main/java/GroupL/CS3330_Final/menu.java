@@ -2,10 +2,15 @@ package GroupL.CS3330_Final;
 
 import java.util.Scanner;
 
+
 import FoodItem.Food;
 import FoodItem.FoodManager;
 import FoodItem.Fruit;
 import FoodItem.*;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import FoodItem.FoodManager;
 
 public class menu {
     
@@ -289,5 +294,19 @@ public class menu {
         // Pass the user input to the removeFood method of the foodManager instance
         foodManager.removeFood(userInput);
         scanner.close();
+    }
+    
+    public class Testing {
+        
+        @Test
+        public void testInitializeFood() {
+            FoodManager foodManager = new FoodManager();
+            boolean result = foodManager.initializeFood();
+            assertEquals(true, result);
+        }
+        
+        
+        
+
     }
 }
