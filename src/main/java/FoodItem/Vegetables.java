@@ -16,7 +16,7 @@ public static void printVegetableRecipes() {
 // Method that prints nutritional Values based off of .json values.
 
 
-public static void printFruitNutritionalRecomendations () {
+public static void printVegetableNutritionalRecomendations () {
     
 
     System.out.println("Vary your veggies. The amount of food from the Vegetable Group you need to eat depends on age, height, weight, and physical activity.");
