@@ -293,10 +293,14 @@ public class menu {
 
         // Create an instance of FoodManager
         FoodManager foodManager = new FoodManager();
+        
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
 
         // Pass the user input to the addFood method of the foodManager instance
         foodManager.addFood(userInput);
-        scanner.close();
     }
     
     private static void removeFoodMenu() {
