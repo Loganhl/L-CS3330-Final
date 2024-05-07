@@ -129,15 +129,20 @@ public class menu {
         System.out.println("To add a food, enter the information as displayed below.");
         System.out.println("foodgroup,foodname,calories,fats,cholesterol,sodium,carbohydrates,protein");
         System.out.println("fruits,Apricot,One Raw,17,0,0,0,4,0");
-        System.out.println("Food group name must be protein, fruits, vegetables, grains, or dairy.");
+        System.out.println("Food group name must be Protein, Fruit, Vegetables, Grains, or Dairy.");
+        System.out.println("(( Case Sensitive, Do not Include any Spaces ))\n");
         System.out.println("===============================");
 
         // Read user input
         String userInput = scanner.nextLine();
-        
-        // Pass the user input to the addFood method
-        FoodManager.addFood(userInput);
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Pass the user input to the addFood method of the foodManager instance
+        foodManager.addFood(userInput);
     }
+
     
     
     

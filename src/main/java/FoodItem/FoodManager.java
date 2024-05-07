@@ -4,6 +4,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
+
 public class FoodManager {
 
 	private String foodFilePath = "src/main/java/foodList.csv";
@@ -175,4 +179,71 @@ public class FoodManager {
 			System.out.println("No fruit found in inventory.");
 		}
 	}
+
+	
+	//Method to add Food.
+	public void addFood(String userInput) {
+	    // Splits the user Input.
+	    String[] parts = userInput.split(",");
+	    if (parts.length != 9) {
+	        System.out.println("Invalid input format. Please enter all fields: foodgroup,foodname,servingsize,calories,fats,cholesterol,sodium,carbohydrates,protein");
+	        return;
+	    }
+
+	    String foodGroup = parts[0].trim();
+	    String foodName = parts[1].trim();
+	    String servingSize = parts[2].trim();
+	    double calories = Double.parseDouble(parts[3].trim());
+	    double fats = Double.parseDouble(parts[4].trim());
+	    double cholesterol = Double.parseDouble(parts[5].trim());
+	    double sodium = Double.parseDouble(parts[6].trim());
+	    double carbohydrates = Double.parseDouble(parts[7].trim());
+	    double protein = Double.parseDouble(parts[8].trim());
+
+	    Food food;
+
+	    switch (foodGroup.toLowerCase()) {
+	        case "fruit":
+	            food = new Fruit(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
+	            break;
+	        case "vegetables":
+	            food = new Vegetables(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
+	            break;
+	        case "grains":
+	            food = new Grains(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
+	            break;
+	        case "protein":
+	            food = new Protein(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
+	            break;
+	        case "dairy":
+	            food = new Dairy(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
+	            break;
+	        default:
+	            System.out.println("Invalid food group. Food group must be Protein, Fruit, Vegetables, Grains, or Dairy.");
+	            return;
+	    }
+
+	    // Initialize foodList if it's null
+	    if (foodList == null) {
+	        foodList = new ArrayList<>();
+	    }
+
+	    foodList.add(food);
+	    System.out.println("\nFood added to the inventory: " + food);
+
+	    // Write the new food item to the CSV file
+	    try (FileWriter writer = new FileWriter("src/main/java/foodList.csv", true)) {
+	        writer.append(userInput + "\n");
+	        writer.flush();
+	        System.out.println("Food added to the CSV file.");
+	    } catch (IOException e) {
+	        System.out.println("Error writing to the CSV file: " + e.getMessage());
+	    }
+	}
+
+
+
+
+
+	
 }
