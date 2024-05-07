@@ -128,7 +128,7 @@ public class menu {
         System.out.println("Add Food\n");
         System.out.println("To add a food, enter the information as displayed below.");
         System.out.println("foodgroup,foodname,calories,fats,cholesterol,sodium,carbohydrates,protein");
-        System.out.println("fruits,Apricot,One Raw,17,0,0,0,4,0");
+        System.out.println("Fruit,Pear,1 medium,100,0.5,0,1,26,1");
         System.out.println("Food group name must be Protein, Fruit, Vegetables, Grains, or Dairy.");
         System.out.println("(( Case Sensitive, Do not Include any Spaces ))\n");
         System.out.println("===============================");
