@@ -2,10 +2,13 @@ package FoodItem;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 public class FoodManager {
@@ -240,10 +243,52 @@ public class FoodManager {
 	        System.out.println("Error writing to the CSV file: " + e.getMessage());
 	    }
 	}
-
-
-
-
-
 	
+	//Method to remove a food item
+	public void removeFood(String userInput) {
+	    if (foodList == null || foodList.isEmpty()) {
+	        System.out.println("No food items to remove.");
+	        return;
+	    }
+
+	    Food foodToRemove = null;
+	    for (Food food : foodList) {
+	        if (food.getName().equalsIgnoreCase(userInput)) {
+	            foodToRemove = food;
+	            break;
+	        }
+	    }
+
+	    if (foodToRemove == null) {
+	        System.out.println("Food Item '" + userInput + "' not found.");
+	        return;
+	    }
+
+	    foodList.remove(foodToRemove);
+	    System.out.println("Food item '" + userInput + "' removed from inventory.");
+
+	    // Update the file
+	    try {
+	        File file = new File(foodFilePath);
+	        if (!file.exists()) {
+	            System.out.println("File '" + foodFilePath + "' not found.");
+	            return;
+	        }
+
+	        List<String> lines = Files.readAllLines(Paths.get(foodFilePath));
+
+	        FileWriter writer = new FileWriter(foodFilePath);
+	        for (String line : lines) {
+	            String[] parts = line.split(",");
+	            if (!parts[1].equalsIgnoreCase(userInput)) {
+	                writer.write(line + System.lineSeparator());
+	            }
+	        }
+	        writer.close();
+
+	    } catch (IOException e) {
+	        System.out.println("Error removing food item from the file: " + e.getMessage());
+	    }
+	}
+
 }

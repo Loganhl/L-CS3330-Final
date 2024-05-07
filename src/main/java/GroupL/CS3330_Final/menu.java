@@ -41,6 +41,9 @@ public class menu {
                     addFoodMenu();
                     break;
                 case "7":
+                    removeFoodMenu();
+                    break;
+                case "8":
                     displayMenu = false;
                     break;
                 default:
@@ -65,7 +68,8 @@ public class menu {
         System.out.println("[4] Grains");
         System.out.println("[5] Protein Foods");
         System.out.println("[6] Add Food");
-        System.out.println("[7] Exit Program");
+        System.out.println("[7] Remove Food");
+        System.out.println("[8] Exit Program");
         System.out.println("===============================");
     }
     
@@ -141,9 +145,24 @@ public class menu {
 
         // Pass the user input to the addFood method of the foodManager instance
         foodManager.addFood(userInput);
+        scanner.close();
     }
+    
+    private static void removeFoodMenu() {
+    	Scanner scanner = new Scanner(System.in);
+        System.out.println("===============================");
+        System.out.println("Remove Food\n");
+        System.out.println("To remove a food, enter the name of the food.");
+        System.out.println("===============================");
 
-    
-    
-    
+        // Read user input
+        String userInput = scanner.nextLine();
+
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Pass the user input to the removeFood method of the foodManager instance
+        foodManager.removeFood(userInput);
+        scanner.close();
+    }
 }
