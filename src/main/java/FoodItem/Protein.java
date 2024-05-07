@@ -1,10 +1,31 @@
 package FoodItem;
 
-
+/**
+ * The Protein class represents protein-rich food items.
+ * It extends the Food class and provides specific functionality
+ * and information related to protein products.
+ */
 public class Protein extends Food {
+	
+    /**
+     * Constructs a new Protein object with the given parameters.
+     *
+     * @param foodName       The name of the protein product.
+     * @param servingSize    The serving size of the protein product.
+     * @param calories       The number of calories in the protein product.
+     * @param fats           The amount of fats in the protein product.
+     * @param cholesterol    The amount of cholesterol in the protein product.
+     * @param sodium         The amount of sodium in the protein product.
+     * @param carbohydrates  The amount of carbohydrates in the protein product.
+     * @param protein        The amount of protein in the protein product.
+     */
 public Protein(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
 	super(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
 }
+
+/**
+ * Prints a recommended protein-rich recipe.
+ */
 	public static void printProteinRecipes() {
     
 
@@ -13,9 +34,9 @@ public Protein(String foodName, String servingSize, double calories, double fats
 
 }
 
-// Method that prints nutritional Values based off of .json values.
-
-
+    /**
+     * Prints nutritional recommendations for protein consumption.
+     */
 public static void printProteinNutritionalRecomendations () {
     
 

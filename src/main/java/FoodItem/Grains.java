@@ -1,10 +1,31 @@
 package FoodItem;
 
-
+/**
+ * The Grains class represents grain food items.
+ * It extends the Food class and provides specific functionality
+ * and information related to grain products.
+ */
 public class Grains extends Food {
+	
+    /**
+     * Constructs a new Grains object with the given parameters.
+     *
+     * @param foodName       The name of the grain product.
+     * @param servingSize    The serving size of the grain product.
+     * @param calories       The number of calories in the grain product.
+     * @param fats           The amount of fats in the grain product.
+     * @param cholesterol    The amount of cholesterol in the grain product.
+     * @param sodium         The amount of sodium in the grain product.
+     * @param carbohydrates  The amount of carbohydrates in the grain product.
+     * @param protein        The amount of protein in the grain product.
+     */
 public Grains(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
 	super(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
 }
+
+/**
+ * Prints a recommended grains recipe.
+ */
 public static void printGrainsRecipes() {
     
 
@@ -13,9 +34,9 @@ public static void printGrainsRecipes() {
 
 }
 
-// Method that prints nutritional Values based off of .json values.
-
-
+/**
+ * Prints nutritional recommendations for grain consumption.
+ */
 public static void printGrainNutritionalRecomendations () {
     
 

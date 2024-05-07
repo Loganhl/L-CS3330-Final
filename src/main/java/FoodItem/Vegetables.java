@@ -1,10 +1,31 @@
 package FoodItem;
 
-
+/**
+ * The Vegetables class represents vegetable food items.
+ * It extends the Food class and provides specific functionality
+ * and information related to vegetable products.
+ */
 public class Vegetables extends Food {
+	
+    /**
+     * Constructs a new Vegetables object with the given parameters.
+     *
+     * @param foodName       The name of the vegetable product.
+     * @param servingSize    The serving size of the vegetable product.
+     * @param calories       The number of calories in the vegetable product.
+     * @param fats           The amount of fats in the vegetable product.
+     * @param cholesterol    The amount of cholesterol in the vegetable product.
+     * @param sodium         The amount of sodium in the vegetable product.
+     * @param carbohydrates  The amount of carbohydrates in the vegetable product.
+     * @param protein        The amount of protein in the vegetable product.
+     */
 public Vegetables(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
 	super(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
 }
+
+/**
+ * Prints a recommended vegetable-rich recipe.
+ */
 public static void printVegetableRecipes() {
     
 
@@ -13,9 +34,9 @@ public static void printVegetableRecipes() {
 
 }
 
-// Method that prints nutritional Values based off of .json values.
-
-
+/**
+ * Prints nutritional recommendations for vegetable consumption.
+ */
 public static void printVegetableNutritionalRecomendations () {
     
 

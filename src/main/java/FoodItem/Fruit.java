@@ -1,17 +1,34 @@
 package FoodItem;
 
-
+/**
+ * The Fruit class represents fruit food items.
+ * It extends the Food class and provides specific functionality
+ * and information related to fruit products.
+ */
 public class Fruit extends Food {
-public Fruit(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
-	super(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
-}
+	
+
+    /**
+     * Constructs a new Fruit object with the given parameters.
+     *
+     * @param foodName       The name of the fruit.
+     * @param servingSize    The serving size of the fruit.
+     * @param calories       The number of calories in the fruit.
+     * @param fats           The amount of fats in the fruit.
+     * @param cholesterol    The amount of cholesterol in the fruit.
+     * @param sodium         The amount of sodium in the fruit.
+     * @param carbohydrates  The amount of carbohydrates in the fruit.
+     * @param protein        The amount of protein in the fruit.
+     */
+	public Fruit(String foodName, String servingSize, double calories, double fats, double cholesterol, double sodium, double carbohydrates, double protein) {
+		super(foodName, servingSize, calories, fats, cholesterol, sodium, carbohydrates, protein);
+	}
 
 
 
-// Method that prints all of the Fruit Names
-
-
-
+    /**
+     * Prints a recommended fruit recipe.
+     */
 public static void printFruitRecipes() {
     
 
@@ -20,9 +37,9 @@ public static void printFruitRecipes() {
 
 }
 
-// Method that prints nutritional Values based off of .json values.
-
-
+/**
+ * Prints nutritional recommendations for fruit consumption.
+ */
 public static void printFruitNutritionalRecomendations () {
     
 
@@ -31,6 +48,6 @@ public static void printFruitNutritionalRecomendations () {
 }
 
 
-//Method that prints common recipe's with fruits based off of .json values.
+
 
 }
