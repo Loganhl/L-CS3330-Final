@@ -16,7 +16,7 @@ public static void printFruitRecipes() {
     
 
     System.out.println("1. Fruit Salad: Ingredients: \n-(Assorted Fruits e.g., strawberries, blue \n2. Add a layer of granola on top of the yogurt. \n3. Wash and prepare the fruits by slicing or chopping them into bite-sized pieces. \n4. Add a layer of assorted fruits on top of the granola. \n5. Drizzle honey over the fruits for added sweetness. \n6. Repeat the layers until the glass or bowl is filled. \n7. Serve immediately as a nutritious breakfast or snack, or refrigerate for later.");
-    }
+    
 
 }
 
