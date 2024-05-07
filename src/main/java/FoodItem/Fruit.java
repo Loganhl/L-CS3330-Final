@@ -27,7 +27,7 @@ public static void printFruitRecipes() {
 public static void printFruitNutritionalRecomendations () {
     
 
-    System.out.println("Recommendation abcd.");
+    System.out.println("Focus on whole fruits. The amount of fruit you need to eat depends on age, height, weight, and physical activity.");
 
 }
 
