@@ -88,7 +88,7 @@ public class menu {
             System.out.println("Failed to initialize food data. Exiting.");
             return;
         }
-        System.out.println("\nFruit Rich Meals:");
+        System.out.println("\nFruit Rich Meal:");
         Fruit.printFruitRecipes();
         
         System.out.println("\nCommon Foods:");
@@ -124,7 +124,7 @@ public class menu {
             System.out.println("Failed to initialize food data. Exiting.");
             return;
         }
-        System.out.println("\nVegetables Rich Meals:");
+        System.out.println("\nVegetables Rich Meal:");
         Vegetables.printVegetableRecipes();
         
         System.out.println("\nCommon Foods:");
@@ -159,7 +159,7 @@ public class menu {
             System.out.println("Failed to initialize food data. Exiting.");
             return;
         }
-        System.out.println("\nDairy Rich Meals:");
+        System.out.println("\nDairy Rich Meal:");
         Dairy.printDairyRecipes();
         
         System.out.println("\nCommon Foods:");
@@ -194,7 +194,7 @@ public class menu {
             System.out.println("Failed to initialize food data. Exiting.");
             return;
         }
-        System.out.println("\nGrains Rich Meals:");
+        System.out.println("\nGrains Rich Meal:");
         Grains.printGrainsRecipes();
         
         System.out.println("\nCommon Foods:");
