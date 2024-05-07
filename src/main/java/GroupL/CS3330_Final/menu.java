@@ -23,6 +23,9 @@ public class menu {
             
             // Take the user input and match it to an action.
             switch (userInput) {
+            	case "0":
+            		displayHighestCalorie();
+            		break;
                 case "1":
                     displayFruitsMenu();
                     break;
@@ -63,6 +66,7 @@ public class menu {
         System.out.println("to show data regarding it. To choose");
         System.out.println("simply type the number before the,");
         System.out.println("group you wish to access.\n");
+        System.out.println("[0] Show Highest Calorie Food");
         System.out.println("[1] Fruits");
         System.out.println("[2] Vegetables");
         System.out.println("[3] Dairy");
@@ -72,6 +76,19 @@ public class menu {
         System.out.println("[7] Remove Food");
         System.out.println("[8] Exit Program");
         System.out.println("===============================");
+    }
+    
+    private static void displayHighestCalorie() {
+        // Create an instance of FoodManager
+        FoodManager foodManager = new FoodManager();
+
+        // Initialize foodList
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            return;
+        }
+        
+        foodManager.printFoodWithHighestCalories();
     }
     
     private static void displayFruitsMenu() {
@@ -285,6 +302,12 @@ public class menu {
 
         // Create an instance of FoodManager
         FoodManager foodManager = new FoodManager();
+        
+        if (!foodManager.initializeFood()) {
+            System.out.println("Failed to initialize food data. Exiting.");
+            scanner.close();
+            return;
+        }
 
         // Pass the user input to the removeFood method of the foodManager instance
         foodManager.removeFood(userInput);
