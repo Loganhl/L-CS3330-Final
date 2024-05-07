@@ -15,7 +15,7 @@ public Fruit(String foodName, String servingSize, double calories, double fats, 
 public static void printFruitRecipes() {
     
 
-    System.out.println("1. Fruit Salad");
+    System.out.println("1. Fruit Salad: Ingredients: \n-(Assorted Fruits e.g., strawberries, blueberries, grapes, kiwi, pineapple) : \n- Instructions: \n1. Wash and chop fruits. \n2. Combine Fruits in bowl. \n3. Toss gently to mix. \n4. Serve chilled.";
     System.out.println("2. Smoothie");
     System.out.println("3. Fruit Parfait");
 
