@@ -94,7 +94,6 @@ public class FoodManager {
 	public void displayAllFruitInformation() {
 		boolean fruitFound = false;
 		
-		System.out.println("Fruit information: ");
 		for (Food food : foodList) {
 			if(food instanceof Fruit) {
 				Fruit fruit = (Fruit) food;
@@ -112,7 +111,6 @@ public class FoodManager {
 	public void displayAllVegetablesInformation() {
 		boolean vegetableFound = false;
 		
-		System.out.println("Vegetable information: ");
 		for (Food food : foodList) {
 			if(food instanceof Fruit) {
 				Vegetables vegetable = (Vegetables) food;
@@ -130,7 +128,6 @@ public class FoodManager {
 	public void displayAllGrainsInformation() {
 		boolean grainsFound = false;
 		
-		System.out.println("Grain information: ");
 		for (Food food : foodList) {
 			if(food instanceof Grains) {
 				Grains grain = (Grains) food;
@@ -148,7 +145,6 @@ public class FoodManager {
 	public void displayAllProteinInformation() {
 		boolean proteinFound = false;
 		
-		System.out.println("Protein Foods information: ");
 		for (Food food : foodList) {
 			if(food instanceof Protein) {
 				Protein protein = (Protein) food;
@@ -166,7 +162,6 @@ public class FoodManager {
 	public void displayAllDairyInformation() {
 		boolean dairyFound = false;
 		
-		System.out.println("Fruit information: ");
 		for (Food food : foodList) {
 			if(food instanceof Dairy) {
 				Dairy dairy = (Dairy) food;
