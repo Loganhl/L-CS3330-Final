@@ -1,17 +1,17 @@
 package GroupL.CS3330_Final;
-
 import java.util.Scanner;
-
-
 import FoodItem.Food;
 import FoodItem.FoodManager;
 import FoodItem.Fruit;
 import FoodItem.*;
-
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import FoodItem.FoodManager;
 
+
+/**
+ * Represents a menu interface for managing the program..
+ */
 public class menu {
     
     public static void start(String[] args) {
@@ -83,6 +83,9 @@ public class menu {
         System.out.println("===============================");
     }
     
+    /**
+     * Displays the food item with the highest calorie content.
+     */
     private static void displayHighestCalorie() {
         // Create an instance of FoodManager
         FoodManager foodManager = new FoodManager();
@@ -95,6 +98,7 @@ public class menu {
         
         foodManager.printFoodWithHighestCalories();
     }
+    
     
     private static void displayFruitsMenu() {
         // Display information about Fruits.
@@ -318,6 +322,8 @@ public class menu {
     }
 
     
+    
+    // JUnit Testing
 public class Testing {
         
         @Test
