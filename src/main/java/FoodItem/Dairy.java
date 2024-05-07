@@ -7,7 +7,7 @@ public Dairy(String foodName, String servingSize, double calories, double fats, 
 	public static void printDairyRecipes() {
     
 
-    System.out.println("Vegetable Stir-Fry Recipe: Ingredients: \n-(Assorted Vegetables e.g., bell peppers, broccoli, carrots, snap peas, mushrooms \n-Garlic, minced\n- Ginger, grated\n- Soy sauce\n Sesame oil\\n- Rice or noodles\\nInstructions:\\n1. Heat sesame oil in a large skillet or wok over medium-high heat.\\n2. Add minced garlic and grated ginger, sauté until fragrant.\\n3. Add chopped vegetables and stir-fry until tender-crisp.\\n4. Drizzle with soy sauce and toss to coat.\\n5. Serve over cooked rice or noodles.)");
+    System.out.println("Greek Yogurt Parfait Recipe:\nIngredients:\n- Greek yogurt\n- Granola\n- Fresh berries (e.g., strawberries, blueberries, raspberries)\n- Honey\nInstructions:\n1. In a glass or bowl, layer Greek yogurt, granola, and fresh berries.\n2. Drizzle honey over the top.\n3. Repeat layers if desired.\n4. Serve immediately as a nutritious breakfast or snack.");
 			
 
 }
