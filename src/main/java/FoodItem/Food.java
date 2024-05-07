@@ -29,7 +29,7 @@ public abstract class Food {
 	//toString method for printing the food details
     @Override
     public String toString() {
-        return foodName + "-" + servingSize +
+        return foodName + " - " + servingSize +
         		"\nCalories: " + calories +", Fats: " + fats + ", Cholesterol: " + cholesterol + ", Sodium: " + sodium + ", Carbohydrates: " + carbohydrates + ", Protein: " + protein;
     }
 
